@@ -21,7 +21,8 @@ CONFIG_SCHEMA = cv.COMPONENT_SCHEMA.extend({
 })
 
 async def to_code(config):
-    var = cg.new_Pvariable(config[CONF_ID], config["uart_id"])
+    uart_var = await cg.get_variable(config["uart_id"])
+    var = cg.new_Pvariable(config[CONF_ID], uart_var)
     await cg.register_component(var, config)
     await uart.register_uart_device(var, config)
 
