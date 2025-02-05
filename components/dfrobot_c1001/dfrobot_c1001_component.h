@@ -8,7 +8,7 @@ namespace dfrobot_c1001 {
 
 class DFRobotC1001Component : public PollingComponent, public uart::UARTDevice {
  public:
-  DFRobotC1001Component(uart::UARTComponent *uart);
+  DFRobotC1001Component(uart::UARTComponent *uart) : PollingComponent(5000), uart::UARTDevice(uart) {}
 
   void setup() override;
   void update() override;
