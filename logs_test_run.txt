@@ -1,0 +1,72 @@
+INFO ESPHome 2024.12.4
+INFO Reading configuration /config/esphome/esphome-web-f44354.yaml...
+INFO Generating C++ source...
+INFO Compiling app...
+Processing esphome-web-f44354 (board: esp32dev; framework: arduino; platform: platformio/espressif32@5.4.0)
+--------------------------------------------------------------------------------
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+Dependency Graph
+|-- WiFi @ 2.0.0
+|-- ESPmDNS @ 2.0.0
+|-- Update @ 2.0.0
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/api_connection.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/api_frame_helper.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/api_pb2.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/api_pb2_service.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/api_server.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/list_entities.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/proto.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/subscribe_state.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/api/user_services.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/esp32/core.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/esp32/gpio.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/esp32/preferences.cpp.o
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/esphome/ota/ota_esphome.cpp.o
+In file included from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:1:
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.h: In constructor 'esphome::dfrobot_c1001::DFRobotC1001Component::DFRobotC1001Component(esphome::uart::UARTComponent*)':
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.h:13:75: error: no matching function for call to 'DFRobot_HumanDetection::DFRobot_HumanDetection()'
+   DFRobotC1001Component(uart::UARTComponent *uart) : uart::UARTDevice(uart) {}
+                                                                           ^
+In file included from src/esphome.h:15,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.h:3,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:1:
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:212:5: note: candidate: 'DFRobot_HumanDetection::DFRobot_HumanDetection(Stream*)'
+     DFRobot_HumanDetection(Stream *s);
+     ^~~~~~~~~~~~~~~~~~~~~~
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:212:5: note:   candidate expects 1 argument, 0 provided
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:84:7: note: candidate: 'constexpr DFRobot_HumanDetection::DFRobot_HumanDetection(const DFRobot_HumanDetection&)'
+ class DFRobot_HumanDetection
+       ^~~~~~~~~~~~~~~~~~~~~~
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:84:7: note:   candidate expects 1 argument, 0 provided
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp: In member function 'virtual void esphome::dfrobot_c1001::DFRobotC1001Component::setup()':
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:12:40: error: no matching function for call to 'DFRobot_HumanDetection::DFRobot_HumanDetection(esphome::dfrobot_c1001::DFRobotC1001Component*)'
+   sensor_ = DFRobot_HumanDetection(this);
+                                        ^
+In file included from src/esphome.h:15,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.h:3,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:1:
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:212:5: note: candidate: 'DFRobot_HumanDetection::DFRobot_HumanDetection(Stream*)'
+     DFRobot_HumanDetection(Stream *s);
+     ^~~~~~~~~~~~~~~~~~~~~~
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:212:5: note:   no known conversion for argument 1 from 'esphome::dfrobot_c1001::DFRobotC1001Component*' to 'Stream*'
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:84:7: note: candidate: 'constexpr DFRobot_HumanDetection::DFRobot_HumanDetection(const DFRobot_HumanDetection&)'
+ class DFRobot_HumanDetection
+       ^~~~~~~~~~~~~~~~~~~~~~
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:84:7: note:   no known conversion for argument 1 from 'esphome::dfrobot_c1001::DFRobotC1001Component*' to 'const DFRobot_HumanDetection&'
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp: In member function 'virtual void esphome::dfrobot_c1001::DFRobotC1001Component::loop()':
+src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:25:22: error: no matching function for call to 'DFRobot_HumanDetection::getData(uint8_t&)'
+     sensor_.getData(c);
+                      ^
+In file included from src/esphome.h:15,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.h:3,
+                 from src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp:1:
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:481:13: note: candidate: 'uint8_t DFRobot_HumanDetection::getData(uint8_t, uint8_t, uint16_t, uint8_t*, uint8_t*)'
+     uint8_t getData(uint8_t con, uint8_t cmd, uint16_t len, uint8_t *senData, uint8_t *retData);
+             ^~~~~~~
+src/esphome/components/dfrobot_c1001/DFRobot_HumanDetection.h:481:13: note:   candidate expects 5 arguments, 1 provided
+Compiling .pioenvs/esphome-web-f44354/src/esphome/components/logger/logger.cpp.o
+*** [.pioenvs/esphome-web-f44354/src/esphome/components/dfrobot_c1001/dfrobot_c1001_component.cpp.o] Error 1
+========================= [FAILED] Took 150.63 seconds =========================
